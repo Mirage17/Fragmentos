@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/SupermanFragment">
+
+    <fragment
+        android:id="@+id/SupermanFragment"
+        android:name="com.davidgrajales.fragmentos.fragments.SupermanFragment"
+        android:label="@string/superman_fragment_label"
+        tools:layout="@layout/fragment_superman">
+
+        <action
+            android:id="@+id/action_SupermanFragment_to_wonderwomanFragment"
+            app:destination="@id/wonderwomanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BatmanFragment"
+        android:name="com.davidgrajales.fragmentos.fragments.BatmanFragment"
+        android:label="@string/batman_fragment_label"
+        tools:layout="@layout/fragment_batman">
+        <action
+            android:id="@+id/action_BatmanFragment_to_SupermanFragment"
+            app:destination="@id/SupermanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wonderwomanFragment"
+        android:name="com.davidgrajales.fragmentos.fragments.WonderwomanFragment"
+        android:label="fragment_wonderwoman"
+        tools:layout="@layout/fragment_wonderwoman" />
+    <fragment
+        android:id="@+id/flashFragment2"
+        android:name="com.davidgrajales.fragmentos.fragments.FlashFragment"
+        android:label="FlashFragment" />
+
+</navigation>
